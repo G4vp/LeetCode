@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def findLengthOfLCIS(self, nums: List[int]) -> int:
         
@@ -9,7 +12,6 @@ class Solution:
                 if prev >= i:
                     ls = 0
             ls += 1      
-
             if ls > mx:
                 mx = ls
             prev = i     
