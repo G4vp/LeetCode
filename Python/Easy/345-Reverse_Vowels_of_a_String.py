@@ -18,3 +18,4 @@ class Solution:
             if f[r] not in al:
                 r -= 1
         return ''.join(f)
+        
