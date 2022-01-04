@@ -2,20 +2,13 @@ from typing import List
 
 
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
         
-            dt = {}
-            
-            for ind in range(len(numbers)):
-                dt[numbers[ind]] = ind + 1
-            
-            for ind in range(len(numbers)):
-                
-                diff = abs(numbers[ind] - target)
-                if diff in dt:
-                    if ind < dt[diff]:
-                        return [ind+1,dt[diff]]
-                    else:
-                        return [dt[diff],ind+1]
-
-                    
+        d = dict()
+        for i in range(len(nums)):
+            d[nums[i]] = i
+        
+        for i in range(len(nums)):
+            diff = target - nums[i]
+            if diff in d and i != d[diff]:
+                return [i,d[diff]]
