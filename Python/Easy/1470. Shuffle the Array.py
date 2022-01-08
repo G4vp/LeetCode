@@ -10,3 +10,4 @@ class Solution:
             out.append(nums[i])
             out.append(nums[i+n])
         return out
+
