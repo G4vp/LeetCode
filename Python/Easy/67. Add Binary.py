@@ -4,3 +4,4 @@ class Solution:
         int_b = int(b,2)
         c = bin(int_a + int_b)[2:]
         return c
+
